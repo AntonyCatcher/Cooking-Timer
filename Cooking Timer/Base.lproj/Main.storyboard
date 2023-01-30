@@ -23,17 +23,15 @@
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="227"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like your eggs?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHQ-A0-6md">
-                                                <rect key="frame" x="8" y="0.0" width="365" height="227"/>
+                                                <rect key="frame" x="12.333333333333343" y="97.333333333333343" width="348.66666666666663" height="32.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="mHQ-A0-6md" firstAttribute="top" secondItem="NFY-Q8-8ap" secondAttribute="top" id="6Jo-H4-rta"/>
-                                            <constraint firstItem="mHQ-A0-6md" firstAttribute="leading" secondItem="NFY-Q8-8ap" secondAttribute="leading" constant="8" id="DE1-aE-kio"/>
-                                            <constraint firstAttribute="trailing" secondItem="mHQ-A0-6md" secondAttribute="trailing" id="VWS-li-UjC"/>
-                                            <constraint firstAttribute="bottom" secondItem="mHQ-A0-6md" secondAttribute="bottom" id="kCW-dZ-j0Y"/>
+                                            <constraint firstItem="mHQ-A0-6md" firstAttribute="centerX" secondItem="NFY-Q8-8ap" secondAttribute="centerX" id="mku-7K-duG"/>
+                                            <constraint firstItem="mHQ-A0-6md" firstAttribute="centerY" secondItem="NFY-Q8-8ap" secondAttribute="centerY" id="wi4-tr-E05"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JC0-bR-Yip">
@@ -130,6 +128,22 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ASd-p3-Ep3" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="532" width="373" height="227"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IRL-Ay-3eu">
+                                                <rect key="frame" x="0.0" y="111" width="373" height="6"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="o8z-eR-llE"/>
+                                                </constraints>
+                                                <color key="progressTintColor" systemColor="systemYellowColor"/>
+                                                <color key="trackTintColor" systemColor="systemGrayColor"/>
+                                            </progressView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="IRL-Ay-3eu" secondAttribute="trailing" id="0a5-c2-Vzm"/>
+                                            <constraint firstItem="IRL-Ay-3eu" firstAttribute="centerX" secondItem="ASd-p3-Ep3" secondAttribute="centerX" id="61R-QP-Cdj"/>
+                                            <constraint firstItem="IRL-Ay-3eu" firstAttribute="leading" secondItem="ASd-p3-Ep3" secondAttribute="leading" id="bTA-vK-QTq"/>
+                                            <constraint firstItem="IRL-Ay-3eu" firstAttribute="centerY" secondItem="ASd-p3-Ep3" secondAttribute="centerY" id="gCr-4y-L1G"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -143,6 +157,10 @@
                             <constraint firstItem="yzF-JA-eVu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="y2U-hN-NH4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressView" destination="IRL-Ay-3eu" id="14T-no-1hv"/>
+                        <outlet property="textLabel" destination="mHQ-A0-6md" id="cXZ-WQ-9xI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,6 +173,12 @@
         <image name="soft_egg" width="287" height="365.33334350585938"/>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
